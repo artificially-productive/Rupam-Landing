@@ -1,0 +1,101 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Rupam Precision - Custom Component Manufacturing' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="bg-black text-neutral-100">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} | Rupam Precision</title>
+  </head>
+  <body class="antialiased min-h-screen flex flex-col">
+    <!-- Header/Nav placeholder -->
+    <header id="site-header" class="fixed w-full top-0 z-50 transition-all duration-300 py-6 px-4 md:px-8 flex justify-between items-center border-b border-transparent">
+      <a href="/" class="block">
+        <img src="/images/logo.png" alt="Rupam Precision" class="h-12 md:h-16 w-auto object-contain transition-all duration-300" id="header-logo" />
+      </a>
+      <nav class="hidden md:flex gap-6">
+        <a href="/about/" class="hover:text-white text-neutral-400 transition-colors">About</a>
+        <a href="/capabilities/" class="hover:text-white text-neutral-400 transition-colors">Capabilities</a>
+        <a href="/industries/" class="hover:text-white text-neutral-400 transition-colors">Industries</a>
+        <a href="/quality/" class="hover:text-white text-neutral-400 transition-colors">Quality</a>
+        <a href="/contact/" class="hover:text-white text-neutral-400 transition-colors">Contact</a>
+      </nav>
+      <a href="/request-a-quote/" class="hidden md:block bg-white text-black px-6 py-2 uppercase text-sm font-bold hover:bg-neutral-200 transition-colors">Request a Quote</a>
+    </header>
+
+    <main class="flex-grow pt-24 md:pt-32">
+      <slot />
+    </main>
+
+    <!-- Footer placeholder -->
+    <footer class="py-12 px-4 md:px-8 border-t border-neutral-800 mt-24">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <a href="/" class="block mb-6">
+            <img src="/images/logo.png" alt="Rupam Precision" class="h-10 md:h-12 w-auto object-contain" />
+          </a>
+          <p class="text-neutral-500 text-sm max-w-xs">Custom precision-machined components. Made to your specifications.</p>
+        </div>
+        <div>
+          <h4 class="font-bold uppercase tracking-wider mb-4 text-sm text-neutral-400">Company</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/about/" class="text-neutral-400 hover:text-white">About</a></li>
+            <li><a href="/facility/" class="text-neutral-400 hover:text-white">Facility</a></li>
+            <li><a href="/components/" class="text-neutral-400 hover:text-white">Components</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold uppercase tracking-wider mb-4 text-sm text-neutral-400">Capabilities</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/capabilities/cnc-machining/" class="text-neutral-400 hover:text-white">CNC Machining</a></li>
+            <li><a href="/capabilities/vmc-machining/" class="text-neutral-400 hover:text-white">VMC Machining</a></li>
+            <li><a href="/capabilities/4th-axis-machining/" class="text-neutral-400 hover:text-white">4th-Axis Machining</a></li>
+            <li><a href="/capabilities/exotic-alloy-machining/" class="text-neutral-400 hover:text-white">Exotic-Alloy Machining</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold uppercase tracking-wider mb-4 text-sm text-neutral-400">Enquiries</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="/request-a-quote/" class="text-white underline underline-offset-4">Request a Quote</a></li>
+            <li><a href="/contact/" class="text-neutral-400 hover:text-white">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-neutral-900 flex flex-col md:flex-row justify-between text-xs text-neutral-600">
+        <p>&copy; {new Date().getFullYear()} Rupam Precision.</p>
+        <div class="flex gap-4 mt-4 md:mt-0">
+          <a href="/privacy-policy/" class="hover:text-neutral-400">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const header = document.getElementById('site-header');
+      const logo = document.getElementById('header-logo');
+      
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header?.classList.add('py-4', 'bg-black/80', 'backdrop-blur-md', 'border-neutral-800');
+          header?.classList.remove('py-6', 'border-transparent');
+          logo?.classList.add('h-8', 'md:h-10');
+          logo?.classList.remove('h-12', 'md:h-16');
+        } else {
+          header?.classList.add('py-6', 'border-transparent');
+          header?.classList.remove('py-4', 'bg-black/80', 'backdrop-blur-md', 'border-neutral-800');
+          logo?.classList.add('h-12', 'md:h-16');
+          logo?.classList.remove('h-8', 'md:h-10');
+        }
+      });
+    </script>
+  </body>
+</html>

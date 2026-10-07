@@ -1,16 +1,344 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Home">
+  <!-- SECTION 01 — HERO -->
+  <section class="min-h-[85vh] flex flex-col justify-end pb-24 px-4 md:px-8 border-b border-neutral-900 relative">
+    <div class="absolute inset-0 z-[-1] bg-neutral-950 flex items-center justify-center opacity-50">
+      <span class="text-neutral-800 text-sm tracking-widest">[ ASSET PLACEHOLDER: DOMINANT COMPONENT IMAGE OR RENDER ]</span>
+    </div>
+    
+    <div class="max-w-6xl z-10">
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tighter leading-[0.9] mb-8">
+        Precision-machined components.<br/>
+        <span class="text-neutral-400 italic">Made to your specifications.</span>
+      </h1>
+      <p class="text-lg md:text-2xl max-w-3xl text-neutral-300 font-light leading-relaxed mb-12">
+        Custom component manufacturing through CNC, VMC, and fourth-axis machining, with capabilities for exotic-grade alloys.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-6">
+        <a href="/request-a-quote/" class="bg-white text-black px-8 py-4 uppercase text-sm font-bold hover:bg-neutral-200 transition-colors inline-block text-center">Request a quote</a>
+        <a href="/capabilities/" class="border border-neutral-700 text-white px-8 py-4 uppercase text-sm font-bold hover:bg-neutral-900 transition-colors inline-block text-center">Explore capabilities</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 02 — CAPABILITY INDEX -->
+  <section class="px-4 md:px-8 py-12 border-b border-neutral-900">
+    <ul class="flex flex-col md:flex-row justify-between uppercase text-xs md:text-sm font-bold tracking-widest text-neutral-400">
+      <li class="py-4 md:py-0 border-b md:border-b-0 border-neutral-800"><a href="/capabilities/cnc-machining/" class="hover:text-white transition-colors">01. CNC Machining</a></li>
+      <li class="py-4 md:py-0 border-b md:border-b-0 border-neutral-800"><a href="/capabilities/vmc-machining/" class="hover:text-white transition-colors">02. VMC Machining</a></li>
+      <li class="py-4 md:py-0 border-b md:border-b-0 border-neutral-800"><a href="/capabilities/4th-axis-machining/" class="hover:text-white transition-colors">03. Fourth-Axis Machining</a></li>
+      <li class="py-4 md:py-0"><a href="/capabilities/exotic-alloy-machining/" class="hover:text-white transition-colors">04. Exotic-Alloy Machining</a></li>
+    </ul>
+  </section>
+
+  <!-- SECTION 03 — ABOUT RUPAM -->
+  <section class="py-32 px-4 md:px-8 border-b border-neutral-900 grid grid-cols-1 lg:grid-cols-2 gap-16">
+    <div class="flex flex-col justify-center">
+      <h2 class="text-4xl md:text-6xl font-bold uppercase tracking-tighter mb-12 leading-none">Built around your component requirements.</h2>
+      <div class="flex gap-6">
+        <a href="/about/" class="uppercase text-sm font-bold tracking-widest border-b border-white pb-1 hover:text-neutral-400 hover:border-neutral-400 transition-colors">About Rupam</a>
+        <a href="/facility/" class="uppercase text-sm font-bold tracking-widest border-b border-white pb-1 hover:text-neutral-400 hover:border-neutral-400 transition-colors">Our Facility</a>
+      </div>
+    </div>
+    <div class="bg-neutral-900 min-h-[500px] flex items-center justify-center">
+      <span class="text-neutral-600 text-sm tracking-widest">[ ASSET PLACEHOLDER: FACTORY OR TEAM IMAGERY ]</span>
+    </div>
+  </section>
+
+  <!-- SECTION 04 — MANUFACTURING CAPABILITIES -->
+  <section class="border-b border-neutral-900">
+    <div class="px-4 md:px-8 py-24 border-b border-neutral-900 grid grid-cols-1 md:grid-cols-12 gap-8 items-start hover:bg-neutral-950 transition-colors">
+      <div class="md:col-span-1 text-2xl text-neutral-600 font-light">01.</div>
+      <div class="md:col-span-4">
+        <h3 class="text-4xl font-bold uppercase tracking-tighter mb-6"><a href="/capabilities/cnc-machining/" class="hover:underline">CNC Machining</a></h3>
+        <p class="text-neutral-400 font-light">[ TODO: Descriptive copy for CNC machining. ]</p>
+      </div>
+      <div class="md:col-span-7 bg-neutral-900 h-64 md:h-96 flex items-center justify-center w-full">
+        <span class="text-neutral-600 text-sm tracking-widest">[ PLACEHOLDER: CNC VISUAL ]</span>
+      </div>
+    </div>
+    <div class="px-4 md:px-8 py-24 border-b border-neutral-900 grid grid-cols-1 md:grid-cols-12 gap-8 items-start hover:bg-neutral-950 transition-colors">
+      <div class="md:col-span-1 text-2xl text-neutral-600 font-light">02.</div>
+      <div class="md:col-span-4">
+        <h3 class="text-4xl font-bold uppercase tracking-tighter mb-6"><a href="/capabilities/vmc-machining/" class="hover:underline">VMC Machining</a></h3>
+        <p class="text-neutral-400 font-light">[ TODO: Descriptive copy for VMC machining. ]</p>
+      </div>
+      <div class="md:col-span-7 bg-neutral-900 h-64 md:h-96 flex items-center justify-center w-full">
+        <span class="text-neutral-600 text-sm tracking-widest">[ PLACEHOLDER: VMC VISUAL ]</span>
+      </div>
+    </div>
+    <div class="px-4 md:px-8 py-24 border-b border-neutral-900 grid grid-cols-1 md:grid-cols-12 gap-8 items-start hover:bg-neutral-950 transition-colors">
+      <div class="md:col-span-1 text-2xl text-neutral-600 font-light">03.</div>
+      <div class="md:col-span-4">
+        <h3 class="text-4xl font-bold uppercase tracking-tighter mb-6"><a href="/capabilities/4th-axis-machining/" class="hover:underline">Fourth-Axis Machining</a></h3>
+        <p class="text-neutral-400 font-light">[ TODO: Descriptive copy for 4th-axis machining. ]</p>
+      </div>
+      <div class="md:col-span-7 bg-neutral-900 h-64 md:h-96 flex items-center justify-center w-full">
+        <span class="text-neutral-600 text-sm tracking-widest">[ PLACEHOLDER: 4TH-AXIS VISUAL ]</span>
+      </div>
+    </div>
+    <div class="px-4 md:px-8 py-24 grid grid-cols-1 md:grid-cols-12 gap-8 items-start hover:bg-neutral-950 transition-colors">
+      <div class="md:col-span-1 text-2xl text-neutral-600 font-light">04.</div>
+      <div class="md:col-span-4">
+        <h3 class="text-4xl font-bold uppercase tracking-tighter mb-6"><a href="/capabilities/exotic-alloy-machining/" class="hover:underline">Exotic-Alloy Machining</a></h3>
+        <p class="text-neutral-400 font-light">[ TODO: Descriptive copy for exotic-alloy machining. ]</p>
+      </div>
+      <div class="md:col-span-7 bg-neutral-900 h-64 md:h-96 flex items-center justify-center w-full">
+        <span class="text-neutral-600 text-sm tracking-widest">[ PLACEHOLDER: EXOTIC-ALLOY VISUAL ]</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 05 — COMPONENTS MANUFACTURED -->
+  <section class="py-32 px-4 md:px-8 border-b border-neutral-900 bg-white text-black">
+    <div class="flex justify-between items-end mb-16">
+      <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter leading-none">Components<br/>Manufactured</h2>
+      <a href="/components/" class="uppercase text-sm font-bold tracking-widest border-b border-black pb-1 hover:text-neutral-500 hover:border-neutral-500 transition-colors hidden md:block">View Gallery</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
+      <div>
+        <div class="bg-neutral-200 aspect-[4/5] w-full mb-6 flex items-center justify-center">
+          <span class="text-neutral-500 text-sm tracking-widest">[ PLACEHOLDER: COMPONENT 1 ]</span>
+        </div>
+        <ul class="text-sm font-bold uppercase tracking-wider space-y-2 border-l-2 border-black pl-4">
+          <li><span class="text-neutral-500">Part:</span> [ TODO ]</li>
+          <li><span class="text-neutral-500">Material:</span> [ TODO ]</li>
+          <li><span class="text-neutral-500">Process:</span> [ TODO ]</li>
+          <li><span class="text-neutral-500">Application:</span> [ TODO ]</li>
+        </ul>
+      </div>
+      <div class="md:mt-32">
+        <div class="bg-neutral-200 aspect-square w-full mb-6 flex items-center justify-center">
+          <span class="text-neutral-500 text-sm tracking-widest">[ PLACEHOLDER: COMPONENT 2 ]</span>
+        </div>
+        <ul class="text-sm font-bold uppercase tracking-wider space-y-2 border-l-2 border-black pl-4">
+          <li><span class="text-neutral-500">Part:</span> [ TODO ]</li>
+          <li><span class="text-neutral-500">Material:</span> [ TODO ]</li>
+          <li><span class="text-neutral-500">Process:</span> [ TODO ]</li>
+          <li><span class="text-neutral-500">Application:</span> [ TODO ]</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 06 — QUALITY AND INSPECTION -->
+  <section class="py-32 px-4 md:px-8 border-b border-neutral-900 relative min-h-screen flex items-center">
+    <div class="absolute inset-0 z-[-1] bg-neutral-900 flex items-center justify-center opacity-40">
+      <span class="text-neutral-700 text-sm tracking-widest">[ ASSET PLACEHOLDER: FULL-WIDTH INSPECTION VISUAL ]</span>
+    </div>
+    <div class="max-w-4xl z-10">
+      <h2 class="text-5xl md:text-8xl font-bold uppercase tracking-tighter leading-none mb-12">Quality checked throughout the process.</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-neutral-300 font-light text-lg mb-12">
+        <p>[ TODO: Inspection methods, in-process and final checks, documentation, traceability. ]</p>
+        <p>[ TODO: Inspection equipment list and certifications if supplied. ]</p>
+      </div>
+      <a href="/quality/" class="uppercase text-sm font-bold tracking-widest border-b border-white pb-1 hover:text-neutral-400 hover:border-neutral-400 transition-colors">Explore quality</a>
+    </div>
+  </section>
+
+  <!-- SECTION 07 — INDUSTRIES SERVED -->
+  <section class="border-b border-neutral-900">
+    <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-neutral-800">
+      <a href="/industries/aerospace/" class="block py-32 px-8 hover:bg-white hover:text-black transition-colors group">
+        <div class="text-neutral-600 group-hover:text-neutral-400 text-sm font-bold tracking-widest uppercase mb-16">Industry 01</div>
+        <h3 class="text-4xl md:text-5xl font-bold uppercase tracking-tighter mb-6">Aerospace</h3>
+        <p class="font-light text-sm group-hover:text-neutral-800 text-neutral-400">[ TODO: Aerospace applications copy. ]</p>
+      </a>
+      <a href="/industries/automotive/" class="block py-32 px-8 hover:bg-white hover:text-black transition-colors group">
+        <div class="text-neutral-600 group-hover:text-neutral-400 text-sm font-bold tracking-widest uppercase mb-16">Industry 02</div>
+        <h3 class="text-4xl md:text-5xl font-bold uppercase tracking-tighter mb-6">Automotive</h3>
+        <p class="font-light text-sm group-hover:text-neutral-800 text-neutral-400">[ TODO: Automotive applications copy. ]</p>
+      </a>
+      <a href="/industries/medical-equipment/" class="block py-32 px-8 hover:bg-white hover:text-black transition-colors group">
+        <div class="text-neutral-600 group-hover:text-neutral-400 text-sm font-bold tracking-widest uppercase mb-16">Industry 03</div>
+        <h3 class="text-4xl md:text-5xl font-bold uppercase tracking-tighter mb-6">Medical<br/>Equipment</h3>
+        <p class="font-light text-sm group-hover:text-neutral-800 text-neutral-400">[ TODO: Medical applications copy. ]</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- SECTION 08 — DRAWING TO DELIVERY -->
+  <section class="py-32 px-4 md:px-8 border-b border-neutral-900 bg-neutral-950 overflow-hidden" id="workflow-section">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-5xl md:text-7xl font-bold uppercase tracking-tighter leading-none mb-32 text-center">Drawing to Delivery</h2>
+      
+      <div class="relative w-full pb-24">
+        <!-- Background Track -->
+        <div class="absolute top-8 left-0 w-full h-[2px] bg-neutral-800 z-0 hidden md:block"></div>
+        <!-- Animated Fill Track -->
+        <div id="workflow-progress" class="absolute top-8 left-0 h-[2px] bg-gradient-to-r from-red-600 to-blue-600 z-0 hidden md:block w-0"></div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-12 md:gap-4 relative z-10">
+          
+          <!-- Step 1 -->
+          <div class="workflow-step relative flex flex-col items-center md:items-start group">
+            <div class="step-node w-16 h-16 rounded-full bg-neutral-950 border-2 border-neutral-800 flex items-center justify-center text-xl font-bold text-neutral-600 mb-6 transition-colors duration-500 mx-auto md:mx-0">1</div>
+            <h4 class="font-bold uppercase tracking-wider mb-2 text-center md:text-left text-neutral-400 step-title transition-colors duration-500">Submit<br/>Requirements</h4>
+          </div>
+          
+          <!-- Step 2 -->
+          <div class="workflow-step relative flex flex-col items-center md:items-start group">
+            <div class="step-node w-16 h-16 rounded-full bg-neutral-950 border-2 border-neutral-800 flex items-center justify-center text-xl font-bold text-neutral-600 mb-6 transition-colors duration-500 mx-auto md:mx-0">2</div>
+            <h4 class="font-bold uppercase tracking-wider mb-2 text-center md:text-left text-neutral-400 step-title transition-colors duration-500">Technical<br/>Review</h4>
+          </div>
+          
+          <!-- Step 3 -->
+          <div class="workflow-step relative flex flex-col items-center md:items-start group">
+            <div class="step-node w-16 h-16 rounded-full bg-neutral-950 border-2 border-neutral-800 flex items-center justify-center text-xl font-bold text-neutral-600 mb-6 transition-colors duration-500 mx-auto md:mx-0">3</div>
+            <h4 class="font-bold uppercase tracking-wider mb-2 text-center md:text-left text-neutral-400 step-title transition-colors duration-500">Quotation<br/>& Planning</h4>
+          </div>
+          
+          <!-- Step 4 -->
+          <div class="workflow-step relative flex flex-col items-center md:items-start group">
+            <div class="step-node w-16 h-16 rounded-full bg-neutral-950 border-2 border-neutral-800 flex items-center justify-center text-xl font-bold text-neutral-600 mb-6 transition-colors duration-500 mx-auto md:mx-0">4</div>
+            <h4 class="font-bold uppercase tracking-wider mb-2 text-center md:text-left text-neutral-400 step-title transition-colors duration-500">Manufacturing<br/>& Inspection</h4>
+          </div>
+          
+          <!-- Step 5 -->
+          <div class="workflow-step relative flex flex-col items-center md:items-start group">
+            <div class="step-node w-16 h-16 rounded-full bg-neutral-950 border-2 border-neutral-800 flex items-center justify-center text-xl font-bold text-neutral-600 mb-6 transition-colors duration-500 mx-auto md:mx-0">5</div>
+            <h4 class="font-bold uppercase tracking-wider mb-2 text-center md:text-left text-neutral-400 step-title transition-colors duration-500">Dispatch</h4>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import { gsap } from 'gsap';
+    import { ScrollTrigger } from 'gsap/ScrollTrigger';
+    
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Only run horizontal timeline logic on desktop to keep mobile readable
+    let mm = gsap.matchMedia();
+    
+    mm.add("(min-width: 768px)", () => {
+      const steps = gsap.utils.toArray('.workflow-step');
+      const progressLine = document.getElementById('workflow-progress');
+      
+      // Calculate how far the line needs to travel (width of container minus half a step to reach the center of the last node)
+      // For simplicity, we just animate the width to 100% tied to the scroll progress.
+      
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#workflow-section",
+          start: "center center",
+          end: "+=1500", // The user scrolls for 1500px to complete the animation
+          pin: true,
+          scrub: 1, // Smooth scrubbing
+        }
+      });
+
+      // Animate the line filling up
+      tl.to(progressLine, { width: "100%", ease: "none", duration: 1 }, 0);
+
+      // Light up the nodes as the line passes them
+      steps.forEach((step: any, i) => {
+        const node = step.querySelector('.step-node');
+        const title = step.querySelector('.step-title');
+        
+        // At what percentage of the timeline should this node light up?
+        const triggerPoint = i / (steps.length - 1);
+        
+        // We add a tiny tween at that exact time in the main timeline
+        tl.to(node, {
+          backgroundColor: "#dc2626", // Red-600
+          backgroundImage: "linear-gradient(to right, #dc2626, #2563eb)", // from-red-600 to-blue-600
+          borderColor: "transparent",
+          color: "white",
+          boxShadow: "0 0 20px rgba(220, 38, 38, 0.4)",
+          duration: 0.1
+        }, triggerPoint);
+        
+        tl.to(title, {
+          color: "white",
+          duration: 0.1
+        }, triggerPoint);
+      });
+    });
+  </script>
+
+  <!-- SECTION 09 — CONTACT AND QUOTATION -->
+  <section class="py-32 px-4 md:px-8 max-w-7xl mx-auto">
+    <h2 class="text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tighter leading-none mb-16 md:mb-24">Tell us what you need manufactured.</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+      <div class="lg:col-span-4">
+        <div class="space-y-8 font-light text-neutral-400">
+          <div>
+            <h4 class="text-sm font-bold uppercase tracking-widest text-white mb-2">Facility</h4>
+            <p>[ TODO: Verified address ]</p>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold uppercase tracking-widest text-white mb-2">Direct Contact</h4>
+            <p>[ TODO: Verified phone ]<br/>[ TODO: Verified email ]</p>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold uppercase tracking-widest text-white mb-2">Business Hours</h4>
+            <p>[ TODO: Operating hours ]</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="lg:col-span-8 bg-neutral-950 p-8 md:p-12 border border-neutral-800">
+        <div class="mb-8 text-amber-500 text-sm border border-amber-900 bg-amber-950/20 p-4">
+          <strong>Note:</strong> Form submission handling is not yet implemented. This UI is for demonstration purposes only. Do not upload actual documents.
+        </div>
+        <form class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-neutral-400" for="name">Name</label>
+              <input type="text" id="name" class="w-full bg-transparent border-b border-neutral-700 py-2 focus:outline-none focus:border-white transition-colors" placeholder="Full name">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-neutral-400" for="company">Company</label>
+              <input type="text" id="company" class="w-full bg-transparent border-b border-neutral-700 py-2 focus:outline-none focus:border-white transition-colors" placeholder="Company name">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-neutral-400" for="email">Email</label>
+              <input type="email" id="email" class="w-full bg-transparent border-b border-neutral-700 py-2 focus:outline-none focus:border-white transition-colors" placeholder="Work email">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-neutral-400" for="phone">Phone</label>
+              <input type="tel" id="phone" class="w-full bg-transparent border-b border-neutral-700 py-2 focus:outline-none focus:border-white transition-colors" placeholder="Contact number">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-neutral-400" for="description">Project Description</label>
+            <textarea id="description" rows="4" class="w-full bg-transparent border-b border-neutral-700 py-2 focus:outline-none focus:border-white transition-colors resize-none" placeholder="Details about the components you need manufactured..."></textarea>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-neutral-400" for="material">Material (Optional)</label>
+              <input type="text" id="material" class="w-full bg-transparent border-b border-neutral-700 py-2 focus:outline-none focus:border-white transition-colors" placeholder="e.g. Titanium Grade 5">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-neutral-400" for="quantity">Quantity (Optional)</label>
+              <input type="text" id="quantity" class="w-full bg-transparent border-b border-neutral-700 py-2 focus:outline-none focus:border-white transition-colors" placeholder="e.g. 500 units">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-widest mb-2 text-neutral-400" for="file">Drawing Attachment (Optional)</label>
+            <div class="border border-dashed border-neutral-700 py-8 text-center text-neutral-500 text-sm hover:border-neutral-500 transition-colors cursor-not-allowed">
+              [ TODO: Secure file upload implementation ]
+            </div>
+          </div>
+          <div class="pt-4">
+            <label class="flex items-start gap-4 cursor-pointer">
+              <input type="checkbox" class="mt-1 bg-transparent border-neutral-700 accent-white">
+              <span class="text-xs text-neutral-400">I acknowledge that the information provided will be used to process my request in accordance with the <a href="/privacy-policy/" class="underline hover:text-white">Privacy Policy</a>.</span>
+            </label>
+          </div>
+          <button type="button" class="bg-white text-black px-8 py-4 uppercase text-sm font-bold hover:bg-neutral-200 transition-colors w-full md:w-auto">Request a Quote</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
