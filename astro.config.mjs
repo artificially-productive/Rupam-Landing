@@ -5,6 +5,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://artificially-productive.github.io',
+  base: '/Rupam-Landing/',
   vite: {
     plugins: [tailwindcss()]
   }
